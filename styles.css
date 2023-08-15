@@ -11,11 +11,12 @@ body {
 }
 
 #header {
-    width: 100%;
+   
     height: 100vh;
     background-image: url(key.png);
     background-size: cover;
     background-position: center;
+    background-blend-mode: darken;
 }
 
 .container {
@@ -26,7 +27,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    
 }
 
 .logo {
@@ -88,7 +89,8 @@ nav ul li a:hover::after {
 }
 
 .about-col-1 {
-    flex-basis: 35%;
+    flex-basis: 30%;
+    margin: auto;
 }
 
 .about-col-1 img {
@@ -98,10 +100,12 @@ nav ul li a:hover::after {
 
 .about-col-2 {
     flex-basis: 60%;
+    margin: auto;
+    width: 100%;
 }
 
 .sub-title {
-    font-size: 60px;
+    font-size: 55px;
     font-weight: 600;
     color: #fff;
 }
@@ -109,6 +113,7 @@ nav ul li a:hover::after {
 .tab-titles {
     display: flex;
     margin: 20px 0 40px;
+    width: 100%;
 }
 
 .tab-links {
@@ -246,7 +251,7 @@ width: 100%;
 }
 
 .layer h2 {
-    margin-bottom: 30px;
+    margin-bottom: 3px;
 }
 
 .layer a {
@@ -378,133 +383,7 @@ nav .fas {
 }
 
 /* ----------CSS FOR SMALL SCREEN---------- */
-@media only screen and (max-width: 600px) {
-    #header {
-        background-image: url(images/phone-background.png);
-    }
-    .work img {
-        width: 100%;
-        border-radius: 10px;
-        display: block;
-        transition: transform 0.5s;
-        background-size: cover;
-    }
-    .services-list {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        grid-gap: 4px;
-        margin-top: 50px;
-        padding: 0px 0px;
-        
-    }
-    .layer h2{
-        font-size: 1px;
-        
-    }
-    .layer p{
-        font-size: 10px;
-    }
-    .header-text {
-        margin-top: 100%;
-        font-size: 16px;
-    }
-
-    .header-text h1 {
-        font-size: 30px;
-    }
-
-    nav .fas {
-        display: block;
-        font-size: 25px;
-    }
-
-    nav ul {
-        background: #b54768;
-        position: fixed;
-        top: 0;
-        width: 200;
-        right: 0;
-        height: 100vh;
-        padding-top: 50px;
-    }
-    form input,
-    form textarea {
-        width: 200%;
-        border: 0;
-        outline: none;
-        background: #262626;
-        padding: 15px;
-        margin: 15px 0;
-        color: #fff;
-        font-size: 18px;
-        border-radius: 6px;
-    }
-    nav ul li {
-        display: block;
-        margin: 25px;
-    }
-    .btn{
-        
-        margin-left: 55px;
-    }
-
-}
-#about {
-    padding: 100px 50px;
-    color: #ababab;
-}
-#services {
-    padding: 50px 100px;
-    width: 100%;
-}
-#portfolio {
-    padding: 50px 100px;
-}
-#contact {
-    padding: 50px 100px;
-}
-.layer {
-    width: 100%;
-    height: 0;
-    background: #ff004f;
-    border-radius: 10px;
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 0 40px;
-    text-align: center;
-    font-size: 16px;
-    transition: height 0.5s;
-}
-
-/* ----------CSS FOR SMALL SCREEN---------- */
-@media only screen and (max-width: 600px) {
-
-    /* Adjust the header image and text size for small screens */
-    #header {
-    width: 180%;
-    height: 50vh;
-    background-image: url(key.png);
-    background-size: cover;
-    background-position: center;
-    }
-    
-
-    .header-text {
-        margin-top: 10%;
-        font-size: 16px;
-    }
-
-    .header-text h1 {
-        font-size: 30px;
-    }
-
-    /* Show the navigation menu on small screens */
+@media only screen and (max-width: 800px) {
     nav ul {
         display: none;
     }
@@ -537,5 +416,82 @@ nav .fas {
         display: block;
         margin: 25px;
     }
+    #header {
+       
+        height: 40vh;
+        background-image: url(key.png);
+        background-size: cover;
+        background-position: center;
+        }
+        .header-text {
+            margin-top: 10%;
+            font-size: 16px;
+        }
+    
+        .header-text h1 {
+            font-size: 30px;
+        }
+
+
+}
+.tab-links {
+   font-size: 16px;
+    margin: auto;
+    padding: 11px;
+}
+@media only screen and (max-width: 800px) {
+    .contact-right{
+        flex-basis: 100%;
+    }
+    .contact-left{
+        flex-basis: 100%;
+        margin: auto;
+        display: flex;
+    align-items: center;
+    flex-direction: column;
+    }
+    .about-col-1 {
+        flex-basis: 30%;
+        margin: auto;
+    }
+    
+.contact-left p i{
+    margin-right: 1px;
+}
+.sub-title {
+    padding: 20px;
+}
+    
+.about-col-1{
+   
+    padding: 5px;
+    flex-basis: 0%;
+}
+.layer {
+    width: 100%;
+    height: 0;
+    background: #ff004f;
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 1px;
+    text-align: center;
+    font-size: 9px;
+    transition: height 0.5s;
+}
+.hidden-text {
+    font-size: 11px;
+
+}
+.about-col-2{
+    flex-basis: 100%;
 }
 
+
+}
